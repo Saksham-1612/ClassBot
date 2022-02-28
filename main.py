@@ -8,8 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
-# os.environ['PATH'] += r"C:/SeleniumDriver"
-# driver = webdriver.Chrome()
+
 c1 = '//*[@id="calendar"]/div[2]/div/table/tbody/tr/td/div/div/div[3]/table/tbody/tr/td[2]/div/div[2]/a[1]'
 c2 = '//*[@id="calendar"]/div[2]/div/table/tbody/tr/td/div/div/div[3]/table/tbody/tr/td[2]/div/div[2]/a[2]'
 c3 = '//*[@id="calendar"]/div[2]/div/table/tbody/tr/td/div/div/div[3]/table/tbody/tr/td[2]/div/div[2]/a[3]'
@@ -55,7 +54,7 @@ def twohr(var1):
     driver.maximize_window()
     driver.find_element(By.NAME, 'i').send_keys(12111097)
     driver.find_element(
-        By.CSS_SELECTOR, 'input[type="password"]').send_keys('December@1612')
+        By.CSS_SELECTOR, 'input[type="password"]').send_keys('yourpass')
     WebDriverWait(driver, 10)
     driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
     WebDriverWait(driver, 2)
