@@ -1,4 +1,5 @@
-_pychache_\
-build\main
-dist\
+_pycache_/
+build/
+build/
+dist/
 main.spec
