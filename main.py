@@ -24,7 +24,7 @@ def onehr(var1):
     driver.maximize_window()
     driver.find_element(By.NAME, 'i').send_keys(12111097)
     driver.find_element(
-        By.CSS_SELECTOR, 'input[type="password"]').send_keys('December@1612')
+        By.CSS_SELECTOR, 'input[type="password"]').send_keys('password')
     WebDriverWait(driver, 10)
     driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
     WebDriverWait(driver, 2)
