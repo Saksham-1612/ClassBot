@@ -30,7 +30,7 @@ def onehr(var1):
     WebDriverWait(driver, 2)
     driver.find_element(
         By.XPATH, '//*[@id="homeCenterDiv"]/div/div[1]/div/div[2]/a').click()
-    WebDriverWait(driver, 10)
+    WebDriverWait(driver, 5)
     x = driver.find_element(By.XPATH, var1)
     x.click()
     WebDriverWait(driver, 30)
@@ -54,13 +54,15 @@ def twohr(var1):
     driver.maximize_window()
     driver.find_element(By.NAME, 'i').send_keys(12111097)
     driver.find_element(
-        By.CSS_SELECTOR, 'input[type="password"]').send_keys('yourpass')
+        By.CSS_SELECTOR, 'input[type="password"]').send_keys('December@1612')
     WebDriverWait(driver, 10)
     driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
     WebDriverWait(driver, 2)
+    driver.find_element_by_xpath(
+        '//*[@id="homeCenterDiv"]/div/div[1]/div/div[2]/a').click()
     driver.find_element(
         By.XPATH, '//*[@id="homeCenterDiv"]/div/div[1]/div/div[2]/a').click()
-    WebDriverWait(driver, 10)
+    WebDriverWait(driver, 5)
     x = driver.find_element(By.XPATH, var1)
     x.click()
     WebDriverWait(driver, 30)
@@ -81,7 +83,7 @@ def timer():
     print("The time is", this_file)
 
 
-schedule.every(1).seconds.do(timer)
+schedule.every(10).seconds.do(timer)
 
 
 def rest():
@@ -97,7 +99,7 @@ schedule.every().tuesday.at("11:03").do(twohr, c2)
 schedule.every().tuesday.at("14:03").do(onehr, c3)
 schedule.every().tuesday.at("15:03").do(onehr, c4)
 
-schedule.every().wednesday.at("09:03").do(onehr, c1)
+schedule.every().wednesday.at("09:25").do(onehr, c1)
 schedule.every().wednesday.at("11:03").do(twohr, c2)
 schedule.every().wednesday.at("14:03").do(onehr, c3)
 schedule.every().wednesday.at("15:03").do(onehr, c4)
